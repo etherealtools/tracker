@@ -5,7 +5,7 @@ app = Flask('')
 
 @app.route('/')
 def home():
-    return "Discord Tracker ok!"
+    return "Discord Tracker cmd ok!"
 
 def ru():
     app.run(host="0.0.0.0", port=8080)
