@@ -1,6 +1,7 @@
 import aiohttp
 import asyncio
 from datetime import datetime, timedelta
+import webserver
 
 # Send a rich Discord embed notification
 async def send_discord_embed(webhook_url, username, status, game_name=None, elapsed_time=None):
@@ -162,6 +163,8 @@ async def main():
 
     await track_users(usernames, webhook_url, roblox_cookie)
 
+
+webserver.keep_alive()
 # Execute the main function
 if __name__ == "__main__":
     asyncio.run(main())
